@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #1c1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  margin: 10px;
+}
+
+svg {
+  width: 25px;
+  height: 25px;
+  fill: white;
+}
