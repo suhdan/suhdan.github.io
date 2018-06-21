@@ -1,0 +1,25 @@
+{
+  "name": "dansuhhh.github.io",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "script.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dansuhhh/dansuhhh.github.io.git"
+  },
+  "author": "Daniel Suh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dansuhhh/dansuhhh.github.io/issues"
+  },
+  "homepage": "https://github.com/dansuhhh/dansuhhh.github.io#readme",
+  "devDependencies": {
+    "webpack": "^4.12.0"
+  }
+}
