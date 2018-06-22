@@ -1,0 +1,27 @@
+{
+  "name": "dansuhhh.github.io",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dansuhhh/dansuhhh.github.io.git"
+  },
+  "author": "Daniel Suh",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "preact": "^8.2.9"
+  }
+}
