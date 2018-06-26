@@ -1,0 +1,67 @@
+.nav {
+  &.hide {
+    display: none;
+  }
+  
+  a {
+    position: absolute;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    opacity: 0.7;
+    transition: opacity 0.1s, transform 0.1s;
+  }
+
+  a:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    transition: transform 0.1s, opacity 0.1s;
+  }
+
+  a > p {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 1em;
+  }
+
+
+  .linkedin {
+    top: 0;
+    left: 0;
+  }
+
+  .github {
+    top: 0;
+    right: 0;
+  }
+
+  a.contact {
+    bottom: 0;
+    left: 0;
+  }
+
+  a.resume {
+    bottom: 0;
+    right: 0;
+  }
+
+  .subsection a {
+    opacity: 0;
+    transition: opacity 0.4s, transform 0.4s ease-out;
+
+    .linkedin {
+      transform: translate(-20px, -20px);
+    }
+    .github {
+      transform: translate(20px, -20px);
+    }
+    .contact {
+      transform: translate(-20px, 20px);
+    }
+    .resume {
+      transform: translate(20px, 20px);
+    }
+  }
+
+
+}

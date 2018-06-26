@@ -1,6 +1,8 @@
 import { h, Component } from 'preact'
-import { LINKED_IN, GITHUB, CONTACT, RESUME } from './assets/svg'
-import Contact from './contact'
+import Nav from './screens/Nav'
+import Contact from './screens/Contact'
+import Resume from './screens/Resume'
+import '~/assets/base.scss'
 import './style.scss'
 
 class App extends Component {
@@ -8,31 +10,27 @@ class App extends Component {
     super()
 
     this.state = {
-      showResume: false,
-      showContact: false
+      currentScreen: 'nav'
     }
+
+    this.changeScreen = this.changeScreen.bind(this)
+  }
+
+  changeScreen(screenName) {
+    this.setState({ currentScreen: screenName })
+  }
+
+  showScreen(screen) {
+    return this.state.currentScreen === screen
   }
   
   render() {
     return(
-      <main>
-        <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/daniel-suh-22653a89/">
-          <LINKED_IN/>
-          <p>linkedin</p>
-        </a>
-        <a target="_blank" class="github" href="https://github.com/dansuhhh">
-          <GITHUB/>
-          <p>github</p>
-        </a>
-        <a class="contact">
-          <CONTACT/>
-          <p>contact</p>
-        </a>
-        <a class="resume">
-          <RESUME/>
-          <p>resume</p>
-        </a>
-        <Contact/>
+      <main>  
+        <Nav show={ this.showScreen('nav') } onClick={ this.changeScreen }/>
+        <Contact show={ this.showScreen('contact') } onExit={() => this.changeScreen('nav')} />
+        <Resume show={ this.showScreen('resume') } onExit={() => this.changeScreen('nav')} />
+
         <p class="copyright">&copy;dansuh</p>
       </main>
     )

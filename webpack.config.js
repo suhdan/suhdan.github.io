@@ -29,6 +29,11 @@ module.exports = {
       },
     ]
   },
+  resolve: {
+    alias: {
+      '~': path.resolve('./src'),
+    },
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
   ]
