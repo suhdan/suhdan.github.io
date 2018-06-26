@@ -1,5 +1,5 @@
 import { h } from 'preact'
-import SVG from './assets/svg'
+import { PHONE, EMAIL, ADDRESS } from './assets/svg'
 
 const Contact = () => {
   return(
@@ -16,15 +16,15 @@ const Contact = () => {
       </div>
       <h3>Contact</h3>
         <div class="contact-point">
-          <SVG.PHONE/>
+          <PHONE/>
           <span>516 660 1770</span>
         </div>
         <div class="contact-point">
-          <SVG.EMAIL/>
+          <EMAIL/>
           <span>dansuh3593@gmail.com</span>
         </div>
         <div class="contact-point">
-          <SVG.ADDRESS/>
+          <ADDRESS/>
           <span>brooklyn, ny</span>
         </div>
     </section>

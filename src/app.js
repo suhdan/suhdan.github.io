@@ -1,6 +1,7 @@
 import { h, Component } from 'preact'
-import SVG from './assets/svg'
+import { LINKED_IN, GITHUB, CONTACT, RESUME } from './assets/svg'
 import Contact from './contact'
+import './style.scss'
 
 class App extends Component {
   constructor() {
@@ -16,19 +17,19 @@ class App extends Component {
     return(
       <main>
         <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/daniel-suh-22653a89/">
-          <SVG.LINKED_IN/>
+          <LINKED_IN/>
           <p>linkedin</p>
         </a>
         <a target="_blank" class="github" href="https://github.com/dansuhhh">
-          <SVG.GITHUB/>
+          <GITHUB/>
           <p>github</p>
         </a>
         <a class="contact">
-          <SVG.CONTACT/>
+          <CONTACT/>
           <p>contact</p>
         </a>
         <a class="resume">
-          <SVG.RESUME/>
+          <RESUME/>
           <p>resume</p>
         </a>
         <Contact/>
