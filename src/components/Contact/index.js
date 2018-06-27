@@ -3,28 +3,30 @@ import { PHONE, EMAIL, ADDRESS } from '~/assets/svg'
 import Back from '~/elements/Back'
 import './styles.scss'
 
-const Contact = (props) => {
+const Contact = props => {
   return(
-    <section className={ `contact ${props.show ? '': 'hide'}` }>
+    <section className="contact-info">
 
       <Back onClick={props.onExit} />
       
       <h3>Contact</h3>
 
-        <div className="contact-point">
+      <ul className="methods">
+        <li>
           <PHONE/>
           <span>516 660 1770</span>
-        </div>
+        </li>
 
-        <div className="contact-point">
+        <li>
           <EMAIL/>
           <span>dansuh3593@gmail.com</span>
-        </div>
+        </li>
 
-        <div className="contact-point">
+        <li>
           <ADDRESS/>
           <span>brooklyn, ny</span>
-        </div>
+        </li>
+      </ul>
 
     </section>
   )

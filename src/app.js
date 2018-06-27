@@ -1,7 +1,9 @@
 import { h, Component } from 'preact'
-import Nav from './screens/Nav'
-import Contact from './screens/Contact'
-import Resume from './screens/Resume'
+import Nav from './components/Nav'
+import Modal from './components/Modal'
+import Contact from './components/Contact'
+import Resume from './components/Resume'
+
 import '~/assets/base.scss'
 import './style.scss'
 
@@ -10,26 +12,33 @@ class App extends Component {
     super()
 
     this.state = {
-      currentScreen: 'nav'
+      currentScreen: 'nav',
+      modalOpen: false
     }
 
     this.changeScreen = this.changeScreen.bind(this)
   }
 
   changeScreen(screenName) {
-    this.setState({ currentScreen: screenName })
-  }
-
-  showScreen(screen) {
-    return this.state.currentScreen === screen
+    this.setState({ 
+      currentScreen: screenName,
+      modalOpen: screenName !== 'nav'
+    })
   }
   
   render() {
     return(
       <main>  
-        <Nav show={ this.showScreen('nav') } onClick={ this.changeScreen }/>
-        <Contact show={ this.showScreen('contact') } onExit={() => this.changeScreen('nav')} />
-        <Resume show={ this.showScreen('resume') } onExit={() => this.changeScreen('nav')} />
+        <Nav onClick={ this.changeScreen }/>
+
+        <Modal visible={ this.state.modalOpen }>
+          { this.state.currentScreen === 'contact' &&
+            <Contact onExit={ () => this.changeScreen('nav') } />
+          }
+          { this.state.currentScreen === 'resume' &&
+            <Resume onExit={ () => this.changeScreen('nav') } />
+          }
+        </Modal>
 
         <p class="copyright">&copy;dansuh</p>
       </main>

@@ -5,7 +5,7 @@ import './styles.scss'
 class Nav extends Component {
   render() {
     return (
-      <section className={ `nav ${this.props.show ? '': 'hide'}` }>
+      <nav className="nav">
 
         <a target="_blank" className="linkedin" href="https://www.linkedin.com/in/daniel-suh-22653a89/">
           <LINKED_IN/>
@@ -27,7 +27,7 @@ class Nav extends Component {
           <p>resume</p>
         </a>
 
-      </section>
+      </nav>
     )
   }
 }
