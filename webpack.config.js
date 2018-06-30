@@ -27,6 +27,15 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
+      {
+        test: /\.pdf$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]'
+          }
+        }]
+      }
     ]
   },
   resolve: {

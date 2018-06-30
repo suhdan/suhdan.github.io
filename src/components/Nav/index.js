@@ -1,6 +1,7 @@
 import { h, Component } from 'preact'
 import { LINKED_IN, GITHUB, CONTACT, RESUME } from '~/assets/svg'
 import './styles.scss'
+const resumeFile = require('../../assets/resume.pdf')
 
 class Nav extends Component {
   render() {
@@ -22,7 +23,7 @@ class Nav extends Component {
           <p>contact</p>
         </a>
 
-        <a href="#" onClick={ () => this.props.onClick('resume')}  className="resume">
+        <a target="_blank" href={ resumeFile } className="resume">
           <RESUME/>
           <p>resume</p>
         </a>
