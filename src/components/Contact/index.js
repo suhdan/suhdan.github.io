@@ -14,12 +14,17 @@ const Contact = props => {
       <ul className="methods">
         <li>
           <PHONE/>
-          <span>516 660 1770</span>
+          <a href="tel:516-660-1770">516 660 1770</a>
         </li>
 
         <li>
           <EMAIL/>
-          <span>dansuh3593@gmail.com</span>
+          <a 
+            target="_blank" 
+            href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=dansuh3593@gmail.com&su=Hi&tf=1"
+          >
+            dansuh3593@gmail.com
+          </a>
         </li>
 
         <li>
