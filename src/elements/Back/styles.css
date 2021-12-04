@@ -6,7 +6,8 @@
 .back > div {
   display: flex;
 }
-.back > div {
+
+.back > div > div {
   background: black;
   margin: 1px;
   width: 8px;

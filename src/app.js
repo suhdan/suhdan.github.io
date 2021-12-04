@@ -1,8 +1,6 @@
 import { h } from "preact";
 import { useState } from "preact/hooks";
-import Nav from "./components/Nav";
-import Modal from "./components/Modal";
-import Contact from "./components/Contact";
+import { Nav, Modal, Contact } from "./components/";
 
 import "~/assets/base.css";
 import "./style.css";
