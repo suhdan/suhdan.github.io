@@ -1,5 +1,5 @@
 {
-  "name": "dansuhhh.github.io",
+  "name": "suhdan.github.io",
   "version": "1.0.0",
   "description": "My personal website",
   "main": "src/index.js",
@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dansuhhh/dansuhhh.github.io.git"
+    "url": "git+https://github.com/suhdan/suhdan.github.io.git"
   },
-  "author": "Daniel Suh",
+  "author": "Dan Suh",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.16.0",
