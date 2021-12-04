@@ -1,12 +1,8 @@
-import { h } from 'preact'
-import './styles.scss'
+import { h } from "preact";
+import "./styles.css";
 
-const Resume = props => {
-  return (
-    <section className="resume">
-      hi
-    </section>
-  )
-}
+const Resume = (props) => {
+  return <section className="resume">hi</section>;
+};
 
-module.exports = Resume
+export default Resume;

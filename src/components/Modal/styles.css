@@ -8,11 +8,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: top 0.3s, opacity 0.3s; 
-
-  &.hide {
-    pointer-events: none;
-    top: -40px;
-    opacity: 0;
-  }
+  transition: top 0.3s, opacity 0.3s;
+}
+.modal.hide {
+  pointer-events: none;
+  top: -40px;
+  opacity: 0;
 }

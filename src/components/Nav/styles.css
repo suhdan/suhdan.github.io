@@ -1,0 +1,51 @@
+.nav {
+  width: 150px;
+  height: 210px;
+  position: relative;
+}
+
+.nav a {
+  position: absolute;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  opacity: 0.7;
+  transition: opacity 0.1s, transform 0.1s;
+}
+
+.nav a:hover {
+  transform: scale(1.05);
+  opacity: 1;
+  transition: transform 0.1s, opacity 0.1s;
+}
+
+.nav p {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.nav svg {
+  width: 60px;
+  height: 60px;
+  fill: white;
+}
+
+.nav .linkedin {
+  top: 0;
+  left: 0;
+}
+
+.nav .github {
+  top: 0;
+  right: 0;
+}
+
+.nav .contact {
+  bottom: 0;
+  left: 0;
+}
+
+.nav .resume {
+  bottom: 0;
+  right: 0;
+}

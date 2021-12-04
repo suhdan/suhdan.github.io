@@ -1,12 +1,12 @@
-import { h } from 'preact'
-import './styles.scss'
+import { h } from "preact";
+import "./styles.css";
 
-const Modal = props => {
+const Modal = (props) => {
   return (
-    <div className={ `modal ${props.visible ? '': 'hide'}` }>
-      { props.children }
+    <div className={`modal ${props.visible ? "" : "hide"}`}>
+      {props.children}
     </div>
-  )
-}
+  );
+};
 
-module.exports = Modal
+export default Modal;

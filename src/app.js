@@ -1,49 +1,34 @@
-import { h, Component } from 'preact'
-import Nav from './components/Nav'
-import Modal from './components/Modal'
-import Contact from './components/Contact'
-// import Resume from './components/Resume'
+import { h } from "preact";
+import { useState } from "preact/hooks";
+import Nav from "./components/Nav";
+import Modal from "./components/Modal";
+import Contact from "./components/Contact";
 
-import '~/assets/base.scss'
-import './style.scss'
+import "~/assets/base.css";
+import "./style.css";
 
-class App extends Component {
-  constructor() {
-    super()
+const App = () => {
+  const [currentScreen, setCurrentScreen] = useState("nav");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-    this.state = {
-      currentScreen: 'nav',
-      modalOpen: false
-    }
+  const changeScreen = (screenName) => {
+    setCurrentScreen(screenName);
+    setIsModalOpen(screenName !== "nav");
+  };
 
-    this.changeScreen = this.changeScreen.bind(this)
-  }
+  return (
+    <main>
+      <Nav onClick={changeScreen} />
 
-  changeScreen(screenName) {
-    this.setState({ 
-      currentScreen: screenName,
-      modalOpen: screenName !== 'nav'
-    })
-  }
-  
-  render() {
-    return(
-      <main>  
-        <Nav onClick={ this.changeScreen }/>
+      <Modal visible={isModalOpen}>
+        {currentScreen === "contact" && (
+          <Contact onExit={() => changeScreen("nav")} />
+        )}
+      </Modal>
 
-        <Modal visible={ this.state.modalOpen }>
-          { this.state.currentScreen === 'contact' &&
-            <Contact onExit={ () => this.changeScreen('nav') } />
-          }
-          { /*this.state.currentScreen === 'resume' &&
-            <Resume onExit={ () => this.changeScreen('nav') } />
-        */}
-        </Modal>
+      <p class="copyright">&copy;dansuh</p>
+    </main>
+  );
+};
 
-        <p class="copyright">&copy;dansuh</p>
-      </main>
-    )
-  }
-}
-
-module.exports = App
+export default App;

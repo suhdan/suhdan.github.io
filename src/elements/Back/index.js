@@ -1,9 +1,9 @@
-import { h, Component } from 'preact'
-import './styles.scss'
+import { h, Component } from "preact";
+import "./styles.css";
 
 const Back = (props) => {
   return (
-    <div onClick={ props.onClick } className="back">
+    <div onClick={props.onClick} className="back">
       <div>
         <div id="back-grid-item-1"></div>
         <div id="back-grid-item-2"></div>
@@ -13,7 +13,7 @@ const Back = (props) => {
         <div id="back-grid-item-4"></div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-module.exports = Back
+export default Back;
